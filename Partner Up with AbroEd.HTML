@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbroEd Visa Consultancy Partner Up with AbroEd</title>
+    <link rel="icon" href="Images/1 (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #fdedb4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.intro {
+    background-color: #fdedb4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+}
+
+.number, .email, .social {
+    color: sienna;
+    padding: 0.5rem;
+}
+
+.email {
+    border-right: 1px solid rgb(251, 196, 170);
+}
+
+.social a {
+    color: sienna;
+    margin: 0 0.5rem;
+}
+
+.appo button {
+    width: clamp(150px, 20vw, 200px);
+    height: 3rem;
+    background-color: rgb(131, 94, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+}
+
+.appo button a {
+    color: #fdedb4;
+    text-decoration: none;
+}
+
+.appo button:hover {
+    background-color: rgba(131, 94, 0, 0.9);
+}
+
+.logo {
+    padding: 1rem;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sub a {
+    color: sienna;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.partner {
+    background-color: #fff8e1;
+    padding: 3rem 5%;
+    text-align: center;
+    color: sienna;
+}
+
+.partner h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #d4a017;
+    margin-bottom: 1rem;
+}
+
+.partner-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.partner-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.partner-text {
+    flex: 1 1 400px;
+}
+
+.partner-text h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: sienna;
+    margin-bottom: 1rem;
+}
+
+.partner-text ul {
+    list-style: none;
+    padding: 0;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.8;
+}
+
+.partner-text li {
+    margin-bottom: 0.5rem;
+}
+
+.partner-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: goldenrod;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.partner-btn:hover {
+    background-color: #d4a017;
+}
+
+.partner-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.partner-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.partner-text p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer {
+    background-color: #001033;
+    color: white;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-top {
+    background: #fdedb4;
+    color: sienna;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 5%;
+}
+
+.section {
+    max-width: 300px;
+    margin: 1rem;
+}
+
+.section a {
+    color: sienna;
+    text-decoration: none;
+}
+
+.section h2 {
+    color: sienna;
+    margin-bottom: 0.5rem;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 0.5rem 0;
+    color: sienna;
+}
+
+.logo1 {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background-color: sienna;
+    color: #fdedb4;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-bottom .links i {
+    margin: 0 0.5rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header, .intro, .sub {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .email {
+        border-right: none;
+        border-bottom: 1px solid rgb(251, 196, 170);
+    }
+    
+    .appo button {
+        margin: 1rem auto;
+    }
+    
+    .partner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .partner h2 {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    }
+    
+    .partner-subtitle {
+        font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+}
+</style>   
+</head>
+<body>
+    <div class="header">
+        <div class="number">
+            <p><b>+91 XXXXXXXXXX</b></p>
+        </div>
+        <div class="email">
+            <p><b>info@example.com&nbsp;&nbsp;</b></p>
+        </div>
+        <div class="social">
+            <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+            <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+            <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+        </div>
+    </div>
+
+    <div class="intro">
+        <div class="logo">
+            <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo">
+        </div>
+        <div class="sub">
+            <a href="Abroed consultancy.html">Home</a>
+            <a href="Study.html">Study</a>
+            <a href="Abroed consultancy.html#our-services">Our Services</a>
+            <a href="Coaching.HTML">Coaching</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="appo">
+            <button><a href="Book an Appointment.HTML">Book an appointment</a></button>
+        </div>
+    </div>
+
+    <section class="partner">
+        <h2>Partner With Us</h2>
+        <p class="partner-subtitle">Join hands with our visa consultancy and grow together. We welcome educational institutions, coaching centers, and overseas consultants to collaborate.</p>
+
+        <div class="partner-content">
+            <div class="partner-text">
+                <h3>Why Partner With Us?</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check" style="color: #63E6BE;"></i> Expand your reach with our global student network</li>
+                    <li><i class="fa-solid fa-check" style="color: #63E6BE;"></i> Transparent process and timely updates</li>
+                    <li><i class="fa-solid fa-check" style="color: #63E6BE;"></i> Trusted name in study visa consultation</li>
+                    <li><i class="fa-solid fa-check" style="color: #63E6BE;"></i> Collaborative growth and dedicated support</li>
+                </ul>
+                <a href="Book an Appointment.HTML" class="partner-btn">Become a Partner</a>
+                <p>*After clicking on the above button you will be redirected to the 'Book an Appointment' page. Please select 'Other' under the 'Country of Interest' section, and kindly mention your interest in becoming a partner in the 'Additional Notes' field.</p>
+            </div>
+
+            <div class="partner-image">
+                <img src="Images/handshake-6701408_1280.jpg" alt="Partner with Us">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="section">
+                <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo" class="logo1">
+            </div>
+            <div class="section">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="Brochure.HTML"><i class="fa-solid fa-file"></i> AbroEd Visa Consultancy Brochure</a></li>
+                    <li><a href="FAQ.HTML"><i class="fa-solid fa-question"></i> FAQs</a></li>
+                    <li><a href="Book an Appointment.HTML"><i class="fa-solid fa-calendar-check"></i> Book An Appointment</a></li>
+                    <li><a href="Student Inquiry Form.HTML"><i class="fa-solid fa-graduation-cap"></i> Student Inquiry Form</a></li>
+                    <li><a href="Partner Up with AbroEd.HTML"><i class="fa-solid fa-handshake"></i> Partner up with AbroEd</a></li>
+                </ul>
+            </div>
+            <div class="section" id="contact">
+                <h2>CONTACT</h2>
+                <p><strong>123 Business Street, City, State, 100001</strong></p>
+                <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
+                <p><i class="fa-solid fa-envelope"></i> info@example.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 AbroEd Visa Consultancy. All Rights Reserved.</p>
+            <p class="links">Follow us: 
+                <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+                <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+                <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

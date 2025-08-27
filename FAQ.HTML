@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AbroEd Visa Consultancy FAQ</title>
+  <link rel="icon" href="Images/1 (1).png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: sienna;
+  margin: 0;
+}
+
+.header {
+  background-color: #fdedb4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2%;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  width: 100%;
+  min-height: 3rem;
+}
+
+.intro {
+  background-color: #fdedb4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2%;
+  width: 100%;
+}
+
+.number, .email, .social {
+  color: sienna;
+  padding: 0.25rem;
+}
+
+.email {
+  border-right: 1px solid rgb(251, 196, 170);
+}
+
+.social a {
+  color: sienna;
+  margin: 0 0.5rem;
+}
+
+.appo button {
+  width: clamp(150px, 20vw, 200px);
+  height: 2.5rem;
+  background-color: rgb(131, 94, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-weight: bold;
+}
+
+.appo button a {
+  color: #fdedb4;
+  text-decoration: none;
+}
+
+.appo button:hover {
+  background-color: rgba(131, 94, 0, 0.9);
+}
+
+.logo {
+  padding: 0.5rem;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.5rem;
+}
+
+.sub a {
+  color: sienna;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: clamp(300px, 90vw, 800px);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #bfa046;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.faq {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.75rem;
+}
+
+.faq-question {
+  background-color: #fff8e6;
+  color: #bfa046;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ 
+.faq-question:hover,
+.faq-question.active {
+  background-color: #f2e4be;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fafafa;
+  padding: 0 1rem;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 0.75rem 0;
+  margin: 0;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer {
+  background-color: #001033;
+  color: white;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-top {
+  background: #fdedb4;
+  color: sienna;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem 5%;
+}
+
+.section {
+  max-width: 300px;
+  margin: 1rem;
+}
+
+.section a {
+  color: sienna;
+  text-decoration: none;
+}
+
+.section h2 {
+  color: sienna;
+  margin-bottom: 0.5rem;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  margin: 0.5rem 0;
+  color: sienna;
+}
+
+.logo1 {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  background-color: sienna;
+  color: #fdedb4;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-bottom .links i {
+  margin: 0 0.5rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header, .intro, .sub {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .email {
+    border-right: none;
+    border-bottom: 1px solid rgb(251, 196, 170);
+  }
+  
+  .appo button {
+    margin: 0.5rem auto;
+  }
+  
+  .container {
+    margin: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  }
+  
+  .faq-question {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+  }
+  
+  .faq-answer p {
+    font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+  }
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="number">
+      <p><b>+91 XXXXXXXXXX</b></p>
+    </div>
+    <div class="email">
+      <p><b>info@example.com&nbsp;&nbsp;</b></p>
+    </div>
+    <div class="social">
+      <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+      <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+      <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+    </div>
+  </div>
+
+  <div class="intro">
+    <div class="logo">
+      <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo">
+    </div>
+    <div class="sub">
+      <a href="Abroed consultancy.html">Home</a>
+      <a href="Study.html">Study</a>
+      <a href="Abroed consultancy.html#our-services">Our Services</a>
+      <a href="Coaching.HTML">Coaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="appo">
+      <button><a href="Book an Appointment.HTML">Book an appointment</a></button>
+    </div>
+  </div>
+
+  <section class="faq-section">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq">
+        <button class="faq-question">1. What types of visas do you help with?</button>
+        <div class="faq-answer">
+          <p>We assist with student visas, tourist visas, dependent visas, PR applications, and work visas for countries like the USA, Canada, UK, Australia, and Europe.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question">2. Do I need IELTS, PTE or DUOLINGO to apply for a student visa?</button>
+        <div class="faq-answer">
+          <p>Most universities require IELTS, PTE or DUOLINGO scores. However, some countries and universities may accept alternative proofs of English proficiency or offer exemptions.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question">3. How long does the visa process take?</button>
+        <div class="faq-answer">
+          <p>The processing time depends on the country and type of visa. Generally, student visa processes take 2–6 weeks after application submission.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question">4. Can you help with visa interview preparation?</button>
+        <div class="faq-answer">
+          <p>Yes! We provide mock interviews, documentation checklists, and tips to boost your confidence and improve your chances of approval.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="faq-question">5. What are your service charges?</button>
+        <div class="faq-answer">
+          <p>Our consultancy fees vary depending on the service package. Please contact us for a personalized quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="section">
+        <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo" class="logo1">
+      </div>
+      <div class="section">
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="Brochure.HTML"><i class="fa-solid fa-file"></i> AbroEd Visa Consultancy Brochure</a></li>
+          <li><a href="FAQ.HTML"><i class="fa-solid fa-question"></i> FAQs</a></li>
+          <li><a href="Book an Appointment.HTML"><i class="fa-solid fa-calendar-check"></i> Book An Appointment</a></li>
+          <li><a href="Student Inquiry Form.HTML"><i class="fa-solid fa-graduation-cap"></i> Student Inquiry Form</a></li>
+          <li><a href="Partner Up with AbroEd.HTML"><i class="fa-solid fa-handshake"></i> Partner up with AbroEd</a></li>
+        </ul>
+      </div>
+      <div class="section" id="contact">
+        <h2>CONTACT</h2>
+        <p><strong>123 Business Street, City, State, 100001</strong></p>
+        <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
+        <p><i class="fa-solid fa-envelope"></i> info@example.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 AbroEd Visa Consultancy. All Rights Reserved.</p>
+      <p class="links">Follow us: 
+        <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+        <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+        <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

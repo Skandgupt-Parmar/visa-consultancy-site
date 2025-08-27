@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbroEd Visa Consultancy Coaching</title>
+    <link rel="icon" href="Images/1 (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #fdedb4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.intro {
+    background-color: #fdedb4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+}
+
+.number, .email, .social {
+    color: sienna;
+    padding: 0.5rem;
+}
+
+.email {
+    border-right: 1px solid rgb(251, 196, 170);
+}
+
+.social a {
+    color: sienna;
+    margin: 0 0.5rem;
+}
+
+.appo button {
+    width: clamp(150px, 20vw, 200px);
+    height: 3rem;
+    background-color: rgb(131, 94, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+}
+
+.appo button a {
+    color: #fdedb4;
+    text-decoration: none;
+}
+
+.appo button:hover {
+    background-color: rgba(131, 94, 0, 0.9);
+}
+
+.logo {
+    padding: 1rem;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sub a {
+    color: sienna;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.coaching {
+    background: #fff8e1;
+    padding: 3rem 5%;
+    text-align: center;
+    color: sienna;
+}
+
+.coaching h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: goldenrod;
+    margin-bottom: 1rem;
+}
+
+.coaching .subtitle {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    margin-bottom: 2rem;
+}
+
+.coaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.coaching-card {
+    background: #fdedb4;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coaching-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.coaching-card h3 {
+    color: sienna;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    margin-bottom: 0.5rem;
+}
+
+.coaching-card p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.4;
+}
+
+.footer {
+    background-color: #001033;
+    color: white;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-top {
+    background: #fdedb4;
+    color: sienna;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 5%;
+}
+
+.section {
+    max-width: 300px;
+    margin: 1rem;
+}
+
+.section a {
+    color: sienna;
+    text-decoration: none;
+}
+
+.section h2 {
+    color: sienna;
+    margin-bottom: 0.5rem;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 0.5rem 0;
+    color: sienna;
+}
+
+.logo1 {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background-color: sienna;
+    color: #fdedb4;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-bottom .links i {
+    margin: 0 0.5rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header, .intro, .sub {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .email {
+        border-right: none;
+        border-bottom: 1px solid rgb(251, 196, 170);
+    }
+    
+    .appo button {
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .coaching h2 {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    }
+    
+    .coaching .subtitle {
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    }
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="number">
+            <p><b>+91 XXXXXXXXXX</b></p>
+        </div>
+        <div class="email">
+            <p><b>info@example.com&nbsp;&nbsp;</b></p>
+        </div>
+        <div class="social">
+            <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+            <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+            <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+        </div>
+    </div>
+
+    <div class="intro">
+        <div class="logo">
+            <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo">
+        </div>
+        <div class="sub">
+            <a href="Abroed consultancy.html">Home</a>
+            <a href="Study.html">Study</a>
+            <a href="Abroed consultancy.html#our-services">Our Services</a>
+            <a href="Coaching.HTML">Coaching</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="appo">
+            <button><a href="Book an Appointment.HTML">Book an appointment</a></button>
+        </div>
+    </div>
+
+    <section class="coaching">
+        <h2>Our Coaching Programs</h2>
+        <p class="subtitle">Get expert training for language tests and prepare for global education success.</p>
+        
+        <div class="coaching-grid">
+            <div class="coaching-card">
+                <h3>IELTS Coaching</h3>
+                <p>Intensive preparation for Academic & General IELTS modules with certified trainers.</p>
+            </div>
+            <div class="coaching-card">
+                <h3>PTE Coaching</h3>
+                <p>Interactive sessions, mock tests, and personalized strategies to ace the PTE exam.</p>
+            </div>
+            <div class="coaching-card">
+                <h3>Duolingo Coaching</h3>
+                <p>Comprehensive guidance to boost your Duolingo scores and English fluency.</p>
+            </div>
+            <div class="coaching-card">
+                <h3>Spoken English</h3>
+                <p>Enhance your communication and fluency with professional spoken English classes.</p>
+            </div>
+        </div>
+    </section>
+      
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="section">
+                <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo" class="logo1">
+            </div>
+            <div class="section">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="Brochure.HTML"><i class="fa-solid fa-file"></i> AbroEd Visa Consultancy Brochure</a></li>
+                    <li><a href="FAQ.HTML"><i class="fa-solid fa-question"></i> FAQs</a></li>
+                    <li><a href="Book an Appointment.HTML"><i class="fa-solid fa-calendar-check"></i> Book An Appointment</a></li>
+                    <li><a href="Student Inquiry Form.HTML"><i class="fa-solid fa-graduation-cap"></i> Student Inquiry Form</a></li>
+                    <li><a href="Partner Up with AbroEd.HTML"><i class="fa-solid fa-handshake"></i> Partner up with AbroEd</a></li>
+                </ul>
+            </div>
+            <div class="section" id="contact">
+                <h2>CONTACT</h2>
+                <p><strong>123 Business Street, City, State, 100001</strong></p>
+                <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
+                <p><i class="fa-solid fa-envelope"></i> info@example.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 AbroEd Visa Consultancy. All Rights Reserved.</p>
+            <p class="links">Follow us: 
+                <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+                <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+                <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

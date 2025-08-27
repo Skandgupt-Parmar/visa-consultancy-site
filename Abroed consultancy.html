@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbroEd Visa Consultancy</title>
+    <link rel="icon" href="Images/1 (1).png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #fdedb4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.intro {
+    background-color: #fdedb4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2%;
+}
+
+.number, .email, .social {
+    color: sienna;
+    padding: 0.5rem;
+}
+
+.email {
+    border-right: 1px solid rgb(251, 196, 170);
+}
+
+.social a {
+    color: sienna;
+    margin: 0 0.5rem;
+}
+
+.appo button {
+    width: clamp(150px, 20vw, 200px);
+    height: 3rem;
+    background-color: rgb(131, 94, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+}
+
+.appo button a {
+    color: #fdedb4;
+    text-decoration: none;
+}
+
+.appo button:hover {
+    background-color: rgba(131, 94, 0, 0.9);
+}
+
+.logo {
+    padding: 1rem;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.sub a {
+    color: sienna;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.aboutus {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: sienna;
+    padding: 3rem 5%;
+    background-image: url(Images/paper-1215011_640.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutus p {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    color: rgb(131, 94, 0);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.bxc1 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 5%;
+}
+
+.bxc {
+    border: 5px solid #fdedb4;
+    width: clamp(300px, 40%, 480px);
+    padding: 1.5rem;
+    background-color: #fdedb4;
+    color: sienna;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-container1 {
+    width: 100%;
+    overflow: hidden;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.slider1 {
+    display: flex;
+    width: 400%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide1 {
+    width: 25%;
+}
+
+.slide1 img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+@keyframes slide1 {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-300%); }
+}
+
+.imi1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.hsr, .hsr1, .hsr2 {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: sienna;
+    text-align: center;
+}
+
+.hsr p, .hsr1 p, .hsr2 p {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.seven p {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    color: sienna;
+    padding: 2rem 5%;
+}
+
+.sevenone {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+    color: sienna;
+    padding: 2rem 5%;
+}
+
+.abr {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+    color: sienna;
+    padding: 2rem 5%;
+    background-color: #fdedb4;
+}
+
+.abr b {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.vbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.ov, .om {
+    flex: 1;
+    min-width: 250px;
+    padding: 2rem;
+    text-align: center;
+    border: 3px solid #fdedb4;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+    color: sienna;
+}
+
+.ov p, .om p {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.services {
+    padding: 3rem 5%;
+}
+
+.services-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: sienna;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.service-card {
+    flex: 1 1 250px;
+    max-width: 350px;
+    padding: 1.5rem;
+    border: 2px solid #fdedb4;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: sienna;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: sienna;
+    margin-bottom: 1rem;
+}
+
+.features {
+    padding: 2rem 5%;
+    text-align: center;
+    background: #fdedb4;
+    color: sienna;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: #fdedb4;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    width: clamp(200px, 25%, 250px);
+    color: sienna;
+}
+
+.countries {
+    background: goldenrod;
+    color: sienna;
+    padding: 3rem 5%;
+    text-align: center;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.country-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.country {
+    background: #fdedb4;
+    color: sienna;
+    padding: 1.5rem;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.country:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.country img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.country h4 {
+    margin-top: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+}
+
+.country p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.4;
+    margin-top: 0.5rem;
+}
+
+.review {
+    background: #fff8e1;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.review h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: goldenrod;
+    margin-bottom: 2rem;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 500%;
+    animation: slide 25s infinite;
+    transition: transform 0.5s ease;
+}
+
+.testimonial {
+    width: 20%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    background: #fdedb4;
+    color: sienna;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background: #fff;
+}
+
+.stars {
+    color: goldenrod;
+    margin-top: 0.5rem;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: goldenrod;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}   
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(0); }
+    20% { transform: translateX(-20%); }
+    35% { transform: translateX(-20%); }
+    40% { transform: translateX(-40%); }
+    55% { transform: translateX(-40%); }
+    60% { transform: translateX(-60%); }
+    75% { transform: translateX(-60%); }
+    80% { transform: translateX(-80%); }
+    100% { transform: translateX(-80%); }
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    text-align: center;
+    background-color: sienna;
+    color: #fdedb4;
+    padding: 2rem 5%;
+}
+
+.stat-item {
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.value {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.value i {
+    margin-left: 0.3rem;
+    font-size: 1rem;
+    color: #fdedb4;
+}
+
+.footer {
+    background-color: #001033;
+    color: white;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-top {
+    background: #fdedb4;
+    color: sienna;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem 5%;
+}
+
+.section {
+    max-width: 300px;
+    margin: 1rem;
+}
+
+.section a {
+    color: sienna;
+    text-decoration: none;
+}
+
+.section h2 {
+    color: sienna;
+    margin-bottom: 0.5rem;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 0.5rem 0;
+    color: sienna;
+}
+
+.logo1 {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background-color: sienna;
+    color: #fdedb4;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.footer-bottom .links i {
+    margin: 0 0.5rem;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header, .intro, .sub {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .email {
+        border-right: none;
+        border-bottom: 1px solid rgb(251, 196, 170);
+    }
+    
+    .appo button {
+        margin: 1rem auto;
+    }
+    
+    .slider-container1 {
+        height: 30vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider-container1 {
+        height: 20vh;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="number">
+            <p><b>+91 XXXXXXXXXX</b></p>
+        </div>
+        <div class="email">
+            <p><b>info@example.com&nbsp;&nbsp;</b></p>
+        </div>
+        <div class="social">
+            <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+            <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+            <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+        </div>
+    </div>
+  
+    <div class="intro">
+        <div class="logo">
+            <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo">
+        </div>
+        <div class="sub">
+            <a href="Abroed consultancy.html">Home</a>
+            <a href="Study.html">Study</a>
+            <a href="#our-services">Our Services</a>
+            <a href="Coaching.HTML">Coaching</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="appo">
+            <button><a href="Book an Appointment.HTML">Book an appointment</a></button>
+        </div>
+    </div>   
+    
+    <div class="aboutus">
+        <p><b>About us</b></p><br>
+        In the majestic mosaic of global wayfaring, AbroEd Visa Consultancy, 
+        nascent yet formidable since its inception in 2024, stands as a lodestar 
+        for aspirants pursuing academic odysseys abroad. With seven years of perspicacious 
+        expertise in the service empyrean, our consultancy delivers immaculate documentation 
+        and incisive embassy interview stratagems. We now transcend conventional paradigms, 
+        offering pedagogic virtuosity in English, equipping candidates for IELTS, PTE, DUOLINGO, 
+        and quotidian conversational fluency. Our archaistic ethos, interwoven with lexicographic 
+        innovation, ensures a tailored sojourn for each scholar. AbroEd remains an indomitable vanguard, 
+        illuminating the labyrinthine path to international academia with erudition and gravitas, 
+        heralding a new era of scholastic liberation.
+    </div>
+    
+    <div class="bxc1">
+        <div class="bxc">
+            <div class="con">
+                <p><b>Visa Consultancy Made Simple</b></p>   
+                <p>We assist individuals in navigating the complex visa application process with ease.</p>
+            </div>
+            <div class="ig">
+                <img src="Images/sella-capital-4101895_1280.jpg" alt="Visa Consultancy">
+            </div>
+        </div>
+    </div>
+  
+    <div class="slider-container1">
+        <div class="slider1">
+            <div class="slide1">
+                <img src="Images/merry-christmas-5219496.jpg" alt="slide1">
+            </div>
+            <div class="slide1">
+                <img src="Images/passport-2530814_1280.jpg" alt="slide2">
+            </div>
+            <div class="slide1">
+                <img src="Images/travel-1410824_1280.jpg" alt="slide3">
+            </div>
+            <div class="slide1">
+                <img src="Images/backpack-1839705_1280.jpg" alt="slide4">
+            </div>
+        </div>
+    </div>
+
+    <div class="imi">
+        <div class="imi1">
+            <div class="hsr">
+                <p><b>High Success Rate</b></p>
+                AbroEd Visa Consultancy has helped many applicants successfully file their visa applications.
+            </div>
+            <div class="hsr1">
+                <p><b>Documentation</b></p>
+                Our centralized document repository securely stores all your documents in one place, making the visa process faster.
+            </div>
+            <div class="hsr2">
+                <p><b>Dedicated Support</b></p>
+                You will be assigned a dedicated AbroEd Visa Consultancy counselor to help you in your process.
+            </div>
+        </div>
+    </div>
+
+    <div class="seven">
+        <p><b>7+ Years of Experience in Visa Service</b></p>
+    </div>
+    <div class="sevenone">
+        AbroEd Visa Consultancy is an Immigration and Visa consultation company. AbroEd Visa Consultancy is one among 
+        the best immigration consultancies offering services for your immigration needs. We developed a business model 
+        that provides solutions to all your immigration concerns.
+    </div>
+
+    <div class="abr">
+        <p><b>Core Values: Your Passport to Possibilities <i class="fa-solid fa-earth-americas"></i></b></p><br><br>
+        <p>A = Aspire - We help you dream big and aim higher.</p><br>
+        <p>B = Bridge - Bridging the gap between you and global opportunities.</p><br>
+        <p>R = Reliable - Trustworthy guidance through every step of your visa journey.</p><br>
+        <p>O = Opportunity – Unlocking doors to world-class education and academic growth abroad.</p><br>
+        <p>E = Expertise - Backed by years of experience and up-to-date knowledge.</p><br>
+        <p>D = Destination - Helping you reach your dream country with confidence.</p><br>
+    </div>
+
+    <div class="vbox">
+        <div class="ov">
+            <i class="fa-solid fa-chalkboard-user"></i><br><br>
+            <p><b>Our Vision</b></p>
+            To be the most client-focused immigration and overseas education consultancy, 
+            continuously striving to liberate our clients from related complexities.
+        </div>
+        <div class="om">
+            <i class="fa-solid fa-flag"></i><br><br>
+            <p><b>Our Mission</b></p>
+            We will delight our clients with the most comprehensive service 
+            system "We are because of our clients".
+        </div>
+    </div>
+
+     <section id="our-services">
+    <div class="container">
+      <div class="services-intro">
+        <h2>Our Services</h2>
+        <br />
+        <p>
+          We provide comprehensive visa and immigration services to help you
+          achieve your international dreams.
+        </p>
+      </div>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Study Visas</h3>
+          <p>
+            Guidance on selecting the right visa for your studies abroad with our
+            expert counseling.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Overseas Education</h3>
+          <p>
+            Study as an international student and increase your chances of global
+            employment.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h3>Coaching</h3>
+          <p>IELTS/PTE/DUOLINGO coaching with official partners and proven results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="features">
+        <h2>We Give Our Best</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Delivering Results</h3>
+                <p>We are committed to delivering services.</p>
+            </div>
+            <div class="card">
+                <h3>Highly Experienced Staff</h3>
+                <p>We’re best in what we do.</p>
+            </div>
+            <div class="card">
+                <h3>No Hidden Cost</h3>
+                <p>That's why we continuously strive to offer the most competitive prices.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="countries">
+        <h2>Immigration: Choose your Country!</h2>
+        <div class="country-grid">
+            <div class="country">
+                <img src="https://flagcdn.com/ca.svg" alt="Canada" />
+                <h4>Canada</h4>
+                <p>Canada is located in North America and is the world's second-largest country by total area.</p>
+            </div>
+            <div class="country">
+                <img src="https://flagcdn.com/gb.svg" alt="UK" />
+                <h4>UK</h4>
+                <p>The UK offers world-class education and attracts more than 550,000 global students yearly.</p>
+            </div>
+            <div class="country">
+                <img src="https://flagcdn.com/au.svg" alt="Australia" />
+                <h4>Australia</h4>
+                <p>Australia is known for its universities and beautiful lifestyle, attracting students globally.</p>
+            </div>
+            <div class="country">
+                <img src="https://flagcdn.com/us.svg" alt="USA" />
+                <h4>USA</h4>
+                <p>The USA offers diverse opportunities, education, and career paths with top global universities.</p>
+            </div>
+            <div class="country">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="Europe" />
+                <h4>Europe</h4>
+                <p>Europe offers affordable education, top universities, and cultural diversity in countries like Germany, France, and the Netherlands.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="review">
+        <h2>Clients Reviews</h2>
+        <div class="slider-container">
+            <div class="slider" id="testimonialSlider">
+                <div class="testimonial">
+                    <p>"They provide excellent coaching for IELTS. From solving all my doubts to giving tips, the team is always there to help!"</p>
+                    <h4>- Smit</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Very supportive and knowledgeable team. They made my Canada study visa process smooth and stress-free."</p>
+                    <h4>- Robin</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"I got my UK student visa approved in less than a month! Highly recommend their guidance and service."</p>
+                    <h4>- Divesh</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Great counseling session. They explained everything in detail about studying in Australia and provided full support."</p>
+                    <h4>- Ujwal</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Best visa consultancy in town! The Europe study program they suggested suited my goals perfectly. Thank you!"</p>
+                    <h4>- Devansh</h4>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="prev" onclick="slide(-1)">&#10094;</button>
+            <button type="button" class="next" onclick="slide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stat-item">
+            <span class="label">Happy Clients</span>
+            <span class="value">50<i class="fa-solid fa-plus"></i></span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Satisfaction</span>
+            <span class="value">100<i class="fa-solid fa-percent"></i></span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Rating</span>
+            <span class="value">4.8<i class="fa-solid fa-star"></i></span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Countries</span>
+            <span class="value">10<i class="fa-solid fa-plus"></i></span>
+        </div>
+        <div class="stat-item">
+            <span class="label">Student Visa</span>
+            <span class="value">50<i class="fa-solid fa-plus"></i></span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="section">
+                <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo" class="logo1">
+            </div>
+            <div class="section">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="Brochure.HTML"><i class="fa-solid fa-file"></i> AbroEd Visa Consultancy Brochure</a></li>
+                    <li><a href="FAQ.HTML"><i class="fa-solid fa-question"></i> FAQs</a></li>
+                    <li><a href="Book an Appointment.HTML"><i class="fa-solid fa-calendar-check"></i> Book An Appointment</a></li>
+                    <li><a href="Student Inquiry Form.HTML"><i class="fa-solid fa-graduation-cap"></i> Student Inquiry Form</a></li>
+                    <li><a href="Partner Up with AbroEd.HTML"><i class="fa-solid fa-handshake"></i> Partner up with AbroEd</a></li>
+                </ul>
+            </div>
+            <div class="section" id="contact">
+                <h2>CONTACT</h2>
+                <p><strong>123 Business Street, City, State, 100001</strong></p>
+                <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
+                <p><i class="fa-solid fa-envelope"></i> info@example.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 AbroEd Visa Consultancy. All Rights Reserved.</p>
+            <p class="links">Follow us: 
+                <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+                <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+                <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>&nbsp;
+            </p>
+        </div>
+    </footer>
+
+
+<script>
+    const slider = document.querySelector('.slider1');
+    const totalSlides = 4; // number of slides
+    let currentIndex = 0;
+
+    function showNextSlide() {
+        currentIndex++;
+        if (currentIndex >= totalSlides) {
+            currentIndex = 0;  // loop back to first slide
+        }
+        slider.style.transform = `translateX(-${currentIndex * 25}%)`;
+    }
+
+    // Change slide every 6 seconds (6000ms)
+    setInterval(showNextSlide, 6000);
+</script>
+
+
+</body>
+</html>

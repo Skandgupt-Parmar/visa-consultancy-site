@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AbroEd Visa Consultancy Study</title>
+  <link rel="icon" href="Images/1 (1).png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: sienna;
+    }
+
+    /* Header strip (contacts) */
+    .header1 {
+      width: 100%;
+      background-color: #fdedb4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      min-height: 3rem;
+    }
+
+    /* Intro with logo and navigation */
+    .intro {
+      width: 100%;
+      background-color: #fdedb4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 2rem;
+    }
+
+    .number, .email, .social {
+      color: sienna;
+      padding: 0.25rem;
+    }
+
+    .email {
+      border-right: 1px solid rgb(251, 196, 170);
+    }
+
+    .social a {
+      color: sienna;
+      margin: 0 0.5rem;
+    }
+
+    .appo button {
+      width: clamp(150px, 20vw, 200px);
+      height: 2.5rem;
+      background-color: rgb(131, 94, 0);
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      font-weight: bold;
+    }
+
+    .appo button a {
+      color: #fdedb4;
+      text-decoration: none;
+    }
+
+    .appo button:hover {
+      background-color: rgba(131, 94, 0, 0.9);
+    }
+
+    .logo {
+      padding: 0.5rem;
+    }
+
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .sub {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding: 0.5rem;
+    }
+
+    .sub a {
+      color: sienna;
+      font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Container for centered content */
+    .container {
+      width: clamp(300px, 90vw, 1200px);
+      margin: 2rem auto;
+      padding: 1rem 0;
+    }
+
+    header nav {
+      background-color: white;
+      border-bottom: 2px solid white;
+      padding: 1rem 0;
+    }
+
+    header h1 {
+      color: #bfa046;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: sienna;
+      font-weight: bold;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #bfa046;
+    }
+
+    /* Hero */
+    .hero {
+      width: 100%;
+      background: linear-gradient(to right, white, white);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #bfa046;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      color: sienna;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background-color: #bfa046;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #a88e38;
+    }
+
+    /* Country Section */
+    .country-section {
+      background-color: #fff;
+      padding: 2rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .country-section h2 {
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      color: #bfa046;
+      margin-bottom: 0.75rem;
+    }
+
+    .country-section p {
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+      color: sienna;
+      margin-bottom: 1rem;
+    }
+
+    .country-section ul {
+      list-style: disc inside;
+      padding-left: 1rem;
+      color: sienna;
+    }
+
+    .country-section ul li {
+      margin-bottom: 0.5rem;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #001033;
+      color: white;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    .footer-top {
+      width: 100%;
+      background: #fdedb4;
+      color: sienna;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2rem 5%;
+    }
+
+    .section {
+      max-width: 300px;
+      margin: 1rem;
+    }
+
+    .section a {
+      color: sienna;
+      text-decoration: none;
+    }
+
+    .section h2, .section h4 {
+      color: sienna;
+      margin-bottom: 0.5rem;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section ul li {
+      margin: 0.5rem 0;
+      color: sienna;
+    }
+
+    .logo1 {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      padding: 1rem;
+      background-color: sienna;
+      color: #fdedb4;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    .footer-bottom .links i {
+      margin: 0 0.5rem;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header1, .intro, .sub {
+        flex-direction: column;
+        align-items: center;
+      }
+      .email {
+        border-right: none;
+        border-bottom: 1px solid rgb(251, 196, 170);
+      }
+      .appo button {
+        margin: 0.5rem auto;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .container {
+        width: clamp(280px, 95vw, 1000px);
+        margin: 1rem auto;
+        padding: 0.5rem 0;
+      }
+      .hero {
+        padding: 1.5rem 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h2, header h1 {
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      }
+      .hero p, .country-section p, .country-section ul li, nav a {
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+      }
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+      }
+      .country-section h2 {
+        font-size: clamp(1.1rem, 2vw, 1.3rem);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full width top header strip -->
+  <div class="header1">
+    <div class="number">
+      <p><b>+91 XXXXXXXXXX</b></p>
+    </div>
+    <div class="email">
+      <p><b>info@example.com&nbsp;&nbsp;</b></p>
+    </div>
+    <div class="social">
+      <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Full width intro -->
+  <div class="intro">
+    <div class="logo">
+      <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo">
+    </div>
+    <div class="sub">
+      <a href="Abroed consultancy.html">Home</a>
+      <a href="Study.html">Study</a>
+      <a href="Abroed consultancy.html#our-services">Our Services</a>
+      <a href="Coaching.HTML">Coaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="appo">
+      <button><a href="Book an Appointment.HTML">Book an appointment</a></button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#usa">USA</a></li>
+          <li><a href="#canada">Canada</a></li>
+          <li><a href="#australia">Australia</a></li>
+          <li><a href="#uk">UK</a></li>
+          <li><a href="#europe">Europe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2>Your Gateway to Global Education</h2>
+      <p>Expert guidance for studying in the USA, Canada, Australia, the UK, and Europe.</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Country Sections -->
+  <section id="usa" class="country-section">
+    <div class="container">
+      <h2>Study in the USA</h2>
+      <p>The USA offers world-renowned education, vibrant campuses, and cutting-edge research opportunities.</p>
+      <ul>
+        <li>Top Programs: Computer Science, Business, Engineering, Health Sciences</li>
+        <li>Popular Visa: F-1 Student Visa</li>
+        <li>Work Options: OPT for up to 3 years in STEM fields</li>
+        <li>Top Universities: MIT, Stanford, Harvard, UC Berkeley</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="canada" class="country-section">
+    <div class="container">
+      <h2>Study in Canada</h2>
+      <p>Canada is known for affordable tuition, multicultural cities, and a high quality of life.</p>
+      <ul>
+        <li>Top Programs: AI, Cybersecurity, Engineering, Business</li>
+        <li>Popular Visa: Study Permit + PGWP</li>
+        <li>Work Options: Post-Graduate Work Permit (up to 3 years)</li>
+        <li>Top Universities: UofT, McGill, UBC, Waterloo</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="australia" class="country-section">
+    <div class="container">
+      <h2>Study in Australia</h2>
+      <p>Australia combines academic excellence with a relaxed lifestyle and beautiful landscapes.</p>
+      <ul>
+        <li>Top Programs: Nursing, IT, Business, Environmental Science</li>
+        <li>Popular Visa: Subclass 500 Student Visa</li>
+        <li>Work Options: 2–4 year post-study work visa</li>
+        <li>Top Universities: University of Melbourne, ANU, University of Sydney</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="uk" class="country-section">
+    <div class="container">
+      <h2>Study in the UK</h2>
+      <p>The UK offers historic institutions, strong global rankings, and 1-year master's programs.</p>
+      <ul>
+        <li>Top Programs: Business, Law, Engineering, Healthcare</li>
+        <li>Popular Visa: Student Route (Tier 4)</li>
+        <li>Work Options: Graduate Route - 2 years post-study</li>
+        <li>Top Universities: Oxford, Cambridge, Imperial College London</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="europe" class="country-section">
+    <div class="container">
+      <h2>Study in Europe</h2>
+      <p>Europe offers affordable tuition, diverse cultures, and a wide range of English-taught programs.</p>
+      <ul>
+        <li>Top Programs: Social Sciences, Engineering, Design, International Relations</li>
+        <li>Popular Destinations: Germany, Netherlands, France, Sweden</li>
+        <li>Work Options: Job-seeker visas post-study (varies by country)</li>
+        <li>Top Universities: University of Amsterdam, LMU Munich, Sorbonne</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="section">
+        <img src="Images/ABROED LOGO2 (1) (1).png" alt="AbroEd Logo" class="logo1">
+      </div>
+      <div class="section">
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="Brochure.HTML"><i class="fa-solid fa-file"></i> AbroEd Visa Consultancy Brochure</a></li>
+          <li><a href="FAQ.HTML"><i class="fa-solid fa-question"></i> FAQs</a></li>
+          <li><a href="Book an Appointment.HTML"><i class="fa-solid fa-calendar-check"></i> Book An Appointment</a></li>
+          <li><a href="Student Inquiry Form.HTML"><i class="fa-solid fa-graduation-cap"></i> Student Inquiry Form</a></li>
+          <li><a href="Partner Up with AbroEd.HTML"><i class="fa-solid fa-handshake"></i> Partner up with AbroEd</a></li>
+        </ul>
+      </div>
+      <div class="section" id="contact">
+        <h2>CONTACT</h2>
+        <p><strong>123 Business Street, City, State, 100001</strong></p>
+        <p><i class="fa-solid fa-phone"></i> +91 XXXXXXXXXX</p>
+        <p><i class="fa-solid fa-envelope"></i> info@example.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 AbroEd Visa Consultancy. All Rights Reserved.</p>
+      <p class="links">Follow us: 
+        <a href="https://example.com"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://example.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://example.com"><i class="fa-brands fa-whatsapp"></i></a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
