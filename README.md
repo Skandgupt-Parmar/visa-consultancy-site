@@ -35,5 +35,5 @@ Design: Features a consistent and warm color scheme (Sienna, Gold, Cream) to evo
 Responsiveness: Fully responsive design ensures a seamless experience across all device sizes (desktop, tablet, mobile).
 
 Key Outcome:
-This project delivered a cohesive and functional digital platform for AbroEd, effectively communicating its services and streamlining its client acquisition process through intuitive forms and clear information architecture.architecture.
+This project delivered a cohesive and functional digital platform for AbroEd, effectively communicating its services and streamlining its client acquisition process through intuitive forms and clear information architecture.
 
